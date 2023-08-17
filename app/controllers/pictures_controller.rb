@@ -67,3 +67,4 @@ end
     params.require(:picture).permit(:image, :image_cache)
   end
 end
+all
