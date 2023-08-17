@@ -1,0 +1,13 @@
+<h1>投稿内容詳細</h1>
+<p>画像: <%= @picture.image %></p>
+<p>内容: <%= @picture.content %></p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @picture.image.url %>
+</p>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'Back', pictures_path %>
