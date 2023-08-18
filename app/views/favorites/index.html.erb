@@ -1,3 +1,15 @@
-<h1>ブログ一覧</h1>
-<%= @favorites %>
+<h1><%= current_user.name %>のお気に入り一覧</h1>
+
+  <body>
+    <% @favorites.each do |favorite| %>
+      <tr>
+      <td><%= image_tag favorite.picture.image.url, size:"160x160" %></td>
+      </tr>
+    <% end %>
+  </body>
+
+<br>
+
+<%= link_to '戻る', pictures_path %>
+<%= link_to '新規投稿', new_picture_path %>
 
