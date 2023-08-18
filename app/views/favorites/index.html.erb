@@ -1,13 +1,18 @@
 <h1><%= current_user.name %>のお気に入り一覧</h1>
 
-  <body>
-    <% @favorites.each do |favorite| %>
-      <tr>
-      <td><%= image_tag favorite.picture.image.url, size:"160x160" %></td>
-      </tr>
-    <% end %>
-  </body>
+<table>
+  <tr>
+    <th>内容</th>
+    <th>画像</th>
+  </tr>
 
+  <% @favorites.each do |favorite| %>
+    <tr>
+    <td><%= favorite.picture.content %></td>
+    <td><%= image_tag favorite.picture.image.url, size:"160x160" %></td>
+    </tr>
+  <% end %>
+</table>
 <br>
 
 <%= link_to '戻る', pictures_path %>

@@ -32,6 +32,9 @@ end
 
   def edit
     @picture = Picture.find(params[:id])
+    if current_user.id != @picture.user_id
+      redirect_to pictures_path, notice: "他人の投稿は編集できません！"
+    end
   end
 
   def update

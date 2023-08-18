@@ -95,6 +95,10 @@ GEM
     crass (1.0.6)
     date (3.3.3)
     debug_inspector (1.1.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -257,6 +261,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick
@@ -268,6 +273,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.6)
+  rexml
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
