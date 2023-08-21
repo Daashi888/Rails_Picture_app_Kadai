@@ -24,14 +24,3 @@
   color: white;
   text-align: center;
 }
-
-footer {
-position: fixed;
-width: 100%;
-left: 0;
-bottom: 0;
-      height: 7%;
-background-color: coral;
-color: white;
-text-align: center;
-}

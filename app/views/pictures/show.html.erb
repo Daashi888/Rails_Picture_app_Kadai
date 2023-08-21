@@ -5,7 +5,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @picture.image.url %>
+  <%= image_tag @picture.image.url, size:"430x380" %>
 </p>
 
 <% if current_user.id == @picture.user_id %>

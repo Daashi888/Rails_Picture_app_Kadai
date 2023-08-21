@@ -11,5 +11,6 @@
 
 <%= form_with(model:@picture, url:new_picture_path, local:true, method:"get") do |form| %>
   <%= form.hidden_field :image_cache %>
+  <%= form.hidden_field :content %>
   <%= form.submit "戻る", name: 'back' %>
 <% end %>
