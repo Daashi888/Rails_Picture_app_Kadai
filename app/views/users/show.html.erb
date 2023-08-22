@@ -2,15 +2,5 @@
 
 <p>メールアドレス: <%= @user.email %></p>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @user.image.url %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', pictures_path %>
-
 <%= link_to "一覧画面に移動する", pictures_path %>
 <%= link_to "新規に投稿する", new_picture_path %>
