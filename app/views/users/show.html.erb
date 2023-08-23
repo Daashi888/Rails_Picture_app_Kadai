@@ -2,5 +2,8 @@
 
 <p>メールアドレス: <%= @user.email %></p>
 
+<%= image_tag(@user.image.url) if @user.image && @user.image.url %>
+
 <%= link_to "一覧画面に移動する", pictures_path %>
 <%= link_to "新規に投稿する", new_picture_path %>
+<%= link_to "プロフィールを編集する", edit_user_path %>

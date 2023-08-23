@@ -58,18 +58,18 @@ end
     render :new if @picture.invalid?
   end
 
-    private
+  private
 
-    def picture_params
-      params.require(:picture).permit(:content, :text, :image, :image_cache :name, :email)
-    end
+  def picture_params
+    params.require(:picture).permit(:content, :text, :image, :image_cache, :name, :email)
+  end
 
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 
-    def feed_params
-      params.require(:picture).permit(:image, :image_cache)
-    end
+  def feed_params
+    params.require(:picture).permit(:image, :image_cache)
   end
 end
+

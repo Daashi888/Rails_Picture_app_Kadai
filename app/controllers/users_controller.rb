@@ -17,6 +17,22 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to pictures_path, notice: "プロフィールを編集しました！"
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    if current_user.id != @user.id
+      redirect_to pictures_path, notice: "他人のプロフィールは編集できません！"
+    end
+  end
+
   private
 
   def user_params
