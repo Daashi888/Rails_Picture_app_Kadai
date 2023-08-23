@@ -10,7 +10,7 @@
   <tr>
     <td><%= image_tag picture.image.url, size:"80x80" %></td>
     <td><%= picture.content %></td>
-    <td><%= link_to '詳細を確認する', picture_path(picture.id) %>
+    <td><%= link_to '詳細', picture_path(picture.id), class:"btn btn-info" %>
     <% if current_user.id == picture.user_id %>
       <%= link_to "投稿内容を編集する", edit_picture_path(picture.id), data: { confirm: '本当に編集していいですか？'} %>
       <%= link_to '投稿を削除する', picture_path(picture.id), method: :delete, data: { confirm: '本当に削除していいですか？'} %>
@@ -23,4 +23,4 @@
 <br>
 
 <%= link_to '新しく記事を投稿する', new_picture_path, class:"btn btn-success" %>
-<%= link_to 'お気に入り登録一覧', favorites_path %>
+<%= link_to 'お気に入り登録一覧', favorites_path, class:"btn btn-warning" %>

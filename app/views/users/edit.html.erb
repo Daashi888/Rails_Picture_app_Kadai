@@ -1,4 +1,4 @@
-<h1>Edit</h1>
+<h1>プロフィールを編集する</h1>
 
 <%= form_with(model: @user, local: true) do |f| %>
   <%= f.label :image %>
@@ -7,3 +7,6 @@
   <%= f.hidden_field :image_cache %>
   <%= f.submit "Create my account" %>
 <% end %>
+
+<%= link_to "一覧画面に移動する", pictures_path %>
+<%= link_to "プロフィールに移動する", user_path %>
